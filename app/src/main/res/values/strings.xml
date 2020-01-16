@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">Login and Signup UI (JAVA)</string>
+    <string name="app_name">Login UI</string>
+
+    <string name="hi_n_welcome_to_your_app">Hi,\nWelcome to your app</string>
+
+    <string name="your_app_tag_line">Your app tag line</string>
+
+    <string name="forget_password">Forget Password?</string>
+
+    <string name="password">Password</string>
+
+    <string name="username">Username</string>
+
+    <string name="sign_in_to_continue">Sign In to continue</string>
+
+    <string name="hello_there_welcome_back">Hello there,\nWelcome Back</string>
+
+    <string name="go">GO</string>
+
+    <string name="new_user_sign_up">New User? SIGN UP</string>
+
+    <string name="welcome">Welcome</string>
+
+    <string name="signup_to_start_your_new_journey">SignUp to start your new journey</string>
+
+    <string name="full_name">Full Name</string>
+
+    <string name="email_id">Email Id</string>
+
+    <string name="phone_number">Phone Number</string>
+
+    <string name="already_have_an_account_login">Already have an account? Login</string>
 </resources>
