@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bubbles_effect"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".SignUpActivity">
 
     <ImageView
         android:id="@+id/logo_image"
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/app_icon"
         android:transitionName="app_icon"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
@@ -23,11 +24,11 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_bold"
         android:includeFontPadding="false"
-        android:text="@string/hello_there_welcome_back"
-        android:textColor="@color/black"
+        android:text="@string/welcome"
+        android:textColor="#000"
         android:textSize="25sp"
-        android:transitionName="@string/hello_there_welcome_back"
-        app:layout_constraintStart_toStartOf="@+id/logo_image"
+        android:transitionName="@string/welcome"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_image" />
 
     <TextView
@@ -36,28 +37,80 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_semibold"
         android:includeFontPadding="false"
-        android:text="@string/sign_in_to_continue"
+        android:text="@string/signup_to_start_your_new_journey"
         android:textSize="18sp"
-        android:transitionName="@string/sign_in_to_continue"
+        android:transitionName="@string/signup_to_start_your_new_journey"
         app:layout_constraintStart_toStartOf="@+id/welcome_message"
         app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
 
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/username"
+        android:id="@+id/fullName"
         style="@style/CustomEditTextTheme"
         android:layout_marginTop="16dp"
-        android:hint="@string/username"
+        android:hint="@string/full_name"
         app:errorEnabled="false"
-        android:transitionName="@string/username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_in_message">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username"
+        style="@style/CustomEditTextTheme"
+        android:hint="@string/username"
+        android:transitionName="@string/username"
+        app:errorEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        style="@style/CustomEditTextTheme"
+        android:hint="@string/email_id"
+        app:errorEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneNumber"
+        style="@style/CustomEditTextTheme"
+        android:hint="@string/phone_number"
+        app:errorEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
@@ -65,8 +118,9 @@
         android:hint="@string/password"
         app:errorEnabled="false"
         android:transitionName="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -76,13 +130,13 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:transitionName="@string/go"
-        android:id="@+id/goButton"
         android:includeFontPadding="false"
-        android:text="@string/go"
+        android:text="@string/sign_up"
+        android:transitionName="@string/sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
@@ -91,12 +145,12 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_user_sign_up"
-        android:transitionName="@string/new_user_sign_up"
+        android:singleLine="false"
+        android:text="@string/already_have_an_account_login"
+        android:transitionName="sign_up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

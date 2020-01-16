@@ -40,7 +40,8 @@ public class SplashActivity extends AppCompatActivity {
         iniView();
         sendToNextActivity();
     }
-     //Initialisation of all the views
+
+    //Initialisation of all the views
     private void iniView() {
 
         appLogo = findViewById(R.id.image_logo);
@@ -63,6 +64,7 @@ public class SplashActivity extends AppCompatActivity {
     private void sendToNextActivity() {
         handler.postDelayed(myRunnable, 2000);
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -77,10 +79,13 @@ public class SplashActivity extends AppCompatActivity {
         public void run() {
 
             //Attach all the elements those you want to animate in design
+            //Pair Class uses same key value type pair
+            //Key is the View to be animated while transition
+            // transitionName matches with SignInActivity XML elements
             Pair[] pairs = new Pair[3];
-            pairs[0] = new Pair<View, String>(appLogo, "logo_image");
-            pairs[1] = new Pair<View, String>(appTitle, "title_text");
-            pairs[2] = new Pair<View, String>(tagLine, "tag_line_text");
+            pairs[0] = new Pair<View, String>(appLogo, "app_icon");
+            pairs[1] = new Pair<View, String>(appTitle, getString(R.string.hello_there_welcome_back));
+            pairs[2] = new Pair<View, String>(tagLine, getString(R.string.sign_in_to_continue));
 
             Intent intent = new Intent(SplashActivity.this, SignInActivity.class);
 

@@ -11,7 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SignInActivity" />
+        <activity android:name=".SignUpActivity"
+            android:theme="@style/FullScreen"/>
+        <activity
+            android:name=".SignInActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/FullScreen" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/FullScreen">
