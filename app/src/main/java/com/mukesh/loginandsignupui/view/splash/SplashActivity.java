@@ -1,4 +1,4 @@
-package com.mukesh.loginandsignupui;
+package com.mukesh.loginandsignupui.view.splash;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.mukesh.loginandsignupui.R;
+import com.mukesh.loginandsignupui.view.signin.SignInActivity;
 
 /**
  * Simple Splash activity with some Transition
